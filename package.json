@@ -2,14 +2,23 @@
   "name": "app",
   "version": "1.0.50",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "bun run --watch src/index.ts"
+    "test": "bun test",
+    "test:watch": "bun test --watch",
+    "test:coverage": "bun test --coverage",
+    "dev": "concurrently \"bun run --watch src/index.ts\" \"cd views && bun run dev\" \"open http://localhost:5173\""
   },
   "dependencies": {
-    "elysia": "latest"
+    "@elysiajs/cors": "^1.3.3",
+    "@prisma/client": "6.8.2",
+    "@types/opn": "^5.5.0",
+    "concurrently": "^9.1.2",
+    "elysia": "latest",
+    "opn": "^6.0.0"
   },
   "devDependencies": {
-    "bun-types": "latest"
+    "bun-types": "latest",
+    "cypress": "^14.4.1",
+    "prisma": "6.8.2"
   },
-  "module": "src/index.js"
+  "type": "module"
 }
