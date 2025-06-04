@@ -5,6 +5,7 @@
     "test": "bun test",
     "test:watch": "bun test --watch",
     "test:coverage": "bun test --coverage",
+    "cypress:open": "bunx cypress open",
     "dev": "concurrently \"bun run --watch src/index.ts\" \"cd views && bun run dev\" \"open http://localhost:5173\""
   },
   "dependencies": {
