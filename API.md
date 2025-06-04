@@ -1,7 +1,7 @@
 # API Documentation
 
 ## Base URL
-`http://localhost:3000/api`
+`http://localhost:3000/api/v1`
 
 ## Endpoints
 
@@ -34,7 +34,7 @@ interface GetFoldersRequest {
 
 #### Example
 ```bash
-curl -X GET "http://localhost:3000/api/folders?search=projects&parentId=123"
+curl -X GET "http://localhost:3000/api/v1/folders?search=projects&parentId=123"
 ```
 
 ---
@@ -68,7 +68,7 @@ interface CreateFolderRequest {
 
 #### Example
 ```bash
-curl -X POST "http://localhost:3000/api/folders" \
+curl -X POST "http://localhost:3000/api/v1/folders" \
   -H "Content-Type: application/json" \
   -d '{"name": "New Folder", "parentId": "123"}'
 ```
